@@ -1,15 +1,13 @@
 public class ValidWordAbbreviation {
     public boolean validWordAbbreviation(String word, String abbr) {
-        //int len = word.length();
         int i = 0;
         int j = 0;
-        //int num = 0;
         while (i < word.length() && j < abbr.length()) {
             if (word.charAt(i) == abbr.charAt(j)) {
                 i++;
                 j++;
             } else {
-                if (!Character.isDigit(abbr.charAt(j))) return false;
+                if (!Character.isDigit(abbr.charAt(j)) || abbr.charAt(j) == '0') return false;
                 int start = j;
                 while (j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
                     j++;
@@ -30,6 +28,14 @@ public class ValidWordAbbreviation {
         boolean res2 = vwa.validWordAbbreviation("internationalization",
                 "i5a11o1");
         System.out.println(res2);
+
+        boolean res3 = vwa.validWordAbbreviation("internationalization",
+                "i12iz4n");
+        System.out.println(res3);
+        boolean res4 = vwa.validWordAbbreviation("a",
+                "01");
+        System.out.println(res4);
+
 
     }
 }
