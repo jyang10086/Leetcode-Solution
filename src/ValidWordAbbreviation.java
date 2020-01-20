@@ -16,7 +16,7 @@ public class ValidWordAbbreviation {
                 i += num;
             }
         }
-        System.out.println("i:" + i + "   j:" + j);
+        //System.out.println("i:" + i + "   j:" + j);
         return i == word.length() && j == abbr.length();
     }
 
