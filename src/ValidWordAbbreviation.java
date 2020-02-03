@@ -1,3 +1,6 @@
+/**
+ * @author wyang101
+ */
 public class ValidWordAbbreviation {
     public boolean validWordAbbreviation(String word, String abbr) {
         int i = 0;
@@ -7,12 +10,14 @@ public class ValidWordAbbreviation {
                 i++;
                 j++;
             } else {
-                if (!Character.isDigit(abbr.charAt(j)) || abbr.charAt(j) == '0') return false;
+                if (!Character.isDigit(abbr.charAt(j)) || abbr.charAt(j) == '0') {
+                    return false;
+                }
                 int start = j;
                 while (j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
                     j++;
                 }
-                int num = Integer.valueOf(abbr.substring(start, j));
+                int num = Integer.parseInt(abbr.substring(start, j));
                 i += num;
             }
         }

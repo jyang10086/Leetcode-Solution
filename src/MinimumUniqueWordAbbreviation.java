@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class MinimumUniqueWordAbbreviation {
@@ -43,12 +41,14 @@ public class MinimumUniqueWordAbbreviation {
                 i++;
                 j++;
             } else {
-                if (!Character.isDigit(abbr.charAt(j)) || abbr.charAt(j) == '0') return false;
+                if (!Character.isDigit(abbr.charAt(j)) || abbr.charAt(j) == '0') {
+                    return false;
+                }
                 int start = j;
                 while (j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
                     j++;
                 }
-                num = Integer.valueOf(abbr.substring(start, j));
+                num = Integer.parseInt(abbr.substring(start, j));
                 i += num;
             }
         }
