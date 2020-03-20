@@ -108,4 +108,11 @@ public class GuessTheWord {
             }
         }
     }
+
+
+    public class Master {
+        public int guess(String str) {
+            return 1;
+        }
+    }
 }
