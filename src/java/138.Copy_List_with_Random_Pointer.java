@@ -27,5 +27,5 @@ class LC138 {
       cur = tmp;
     }
     return copyHead;
-}
+  }
 }
