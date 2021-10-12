@@ -22,7 +22,7 @@ class LC273 {
   String[] nineteen = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
   String[] tens = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
   String[] thousands = {"", "Thousand", "Million", "Billion", "Thrillion"};
-  // O(n)
+  // O(1)
   public String numberToWords(int num) {
     if (num == 0) {
       return "Zero";
