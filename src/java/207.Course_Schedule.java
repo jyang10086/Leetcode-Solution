@@ -1,4 +1,4 @@
-class Solution {
+class LC207 {
   public boolean canFinish(int numCourses, int[][] prerequisites) {
     List<List<Integer>> edges = new ArrayList<>();
     for (int i = 0; i < numCourses; i++) {
